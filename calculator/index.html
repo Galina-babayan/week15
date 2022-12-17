@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="row">
+        <div class="row__name">
+          <div onclick="showMessage()" class="row__button row__button-e">
+            Нажми меня!
+          </div>
+        </div>
+        <h1 class="row__title">арифметические действия:</h1>
+        <div class="row__body">
+          <div onclick="select(this)" class="row__item row__item-1">
+            <div onclick="calcSum()" class="row__button row__button-a">
+              Сложение
+            </div>
+          </div>
+          <div onclick="select(this)" class="row__item row__item-2">
+            <div onclick="calcSubt()" class="row__button row__button-b">
+              Вычитание
+            </div>
+          </div>
+          <div onclick="select(this)" class="row__item row__item-3">
+            <div onclick="calcMult()" class="row__button row__button-c">
+              Умножение
+            </div>
+          </div>
+          <div onclick="select(this)" class="row__item row__item-4">
+            <div onclick="calcQuot()" class="row__button row__button-d">
+              Деление
+            </div>
+          </div>
+        </div>
+        <h1 class="row__title">арифметические действия: вариант II</h1>
+        <div class="row__buttons">
+          <div class="row__calc">
+            <a class="row__button" href="#popup5">Нажми меня!</a>
+          </div>
+          <div class="row__calc">
+            <a class="row__button" href="#popup1">Сложение</a>
+          </div>
+          <div class="row__calc">
+            <a class="row__button" href="#popup2">Вычитание</a>
+          </div>
+          <div class="row__calc">
+            <a class="row__button" href="#popup3">Умножение</a>
+          </div>
+          <div class="row__calc">
+            <a class="row__button" href="#popup4">Деление</a>
+          </div>
+        </div>
+        <h1 class="row__title">арифметические действия: вариант III</h1>
+        <div class="row__count">
+          <input
+            placeholder="Первое число"
+            class="row__reg"
+            id="input1"
+            type="text"
+          />
+          <input
+            placeholder="Второе число"
+            class="row__reg"
+            id="input2"
+            type="text"
+          />
+          <div class="row__count">
+            <div onclick="Sum()" class="row__button row__button2">+</div>
+            <div onclick="Sub()" class="row__button row__button2">-</div>
+            <div onclick="Mult()" class="row__button row__button2">*</div>
+            <div onclick="Quot()" class="row__button row__button2">/</div>
+            <div onclick="Clear()" class="row__button row__button2 w2">
+              Сброс
+            </div>
+            <div id="result" class="row__button row__button2 w2"></div>
+          </div>
+        </div>
+        <h1 class="row__title">Слайдер</h1>
+        <div class="row__images">
+          <div onclick="PreviousImg()" class="row__button">Назад</div>
+          <div class="row__image">
+            <img class="image" src="./images/5.JPG" alt="" />
+          </div>
+          <div onclick="NextImg()" class="row__button">Вперед</div>
+        </div>
+        <h1 class="row__title">Счетчик1</h1>
+        <div class="row__images">
+          <div id="counter" class="row__button">Считать</div>
+          <div id="countresult" class="row__button"></div>
+        </div>
+
+        <h1 class="row__title">Счетчик2</h1>
+        <div class="row__images">
+          <div class="meter meter_1">
+            <div class="row__button butcounter">Считать</div>
+            <div class="row__button butshow"></div>
+          </div>
+          <div class="meter meter_2">
+            <div class="row__button butcounter">Считать</div>
+            <div class="row__button butshow"></div>
+          </div>
+          <div class="meter meter_3">
+            <div class="row__button butcounter">Считать</div>
+            <div class="row__button butshow"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calculator" id="popup5">
+        <div class="calculator__content">
+          <form>
+            <div class="calculator__text">
+              <h2>Напишите ваше имя</h2>
+            </div>
+            <div class="calculator__form">
+              <div class="calculator__name">
+                <label class="calculator__label" for="name1"></label>
+                <input
+                  value=""
+                  class="form__reg"
+                  type="text"
+                  name="number"
+                  id="name1"
+                />
+              </div>
+            </div>
+            <div onclick="showName()" class="calculator__button btn">
+              Нажмите
+            </div>
+            <div class="show-name btn-calc"></div>
+            <a href="#popup-close" class="close-popup">X</a>
+          </form>
+        </div>
+      </div>
+
+      <div class="calculator" id="popup1">
+        <div class="calculator__content">
+          <form>
+            <div class="calculator__text">
+              <h2>Посчитать сумму чисел</h2>
+              <p>введите два числа</p>
+            </div>
+            <div class="calculator__form">
+              <div class="calculator__name">
+                <label class="calculator__label" for="number1"></label>
+                <input
+                  value=""
+                  class="form__reg"
+                  type="text"
+                  name="number"
+                  id="number1"
+                  placeholder="Первое число"
+                />
+              </div>
+              <div class="calculator__number">
+                <label class="calculator__label" for="number2"></label>
+                <input
+                  class="form__reg"
+                  type="text"
+                  name="number"
+                  id="number2"
+                  placeholder="Второе число"
+                />
+              </div>
+            </div>
+            <div onclick="calcS()" class="calculator__button btn">
+              Посчитать
+            </div>
+            <div class="sum btn-calc"></div>
+            <a href="#popup-close" class="close-popup">X</a>
+          </form>
+        </div>
+      </div>
+      <div class="calculator" id="popup2">
+        <div class="calculator__content">
+          <form>
+            <div class="calculator__text">
+              <h2>Посчитать разность чисел</h2>
+              <p>введите два числа</p>
+            </div>
+            <div class="calculator__form">
+              <div class="calculator__name">
+                <label class="calculator__label" for="number3"></label>
+                <input
+                  value=""
+                  class="form__reg"
+                  type="text"
+                  name="number"
+                  id="number3"
+                  placeholder="Первое число"
+                />
+              </div>
+              <div class="calculator__number">
+                <label class="calculator__label" for="number4"></label>
+                <input
+                  class="form__reg"
+                  type="text"
+                  name="number"
+                  id="number4"
+                  placeholder="Второе число"
+                />
+              </div>
+            </div>
+            <div onclick="calcSub()" class="calculator__button btn">
+              Посчитать
+            </div>
+            <div class="sub btn-calc"></div>
+            <a href="#popup-close" class="close-popup">X</a>
+          </form>
+        </div>
+      </div>
+      <div class="calculator" id="popup3">
+        <div class="calculator__content">
+          <form>
+            <div class="calculator__text">
+              <h2>Посчитать произведение чисел</h2>
+              <p>введите два числа</p>
+            </div>
+            <div class="calculator__form">
+              <div class="calculator__name">
+                <label class="calculator__label" for="number5"></label>
+                <input
+                  value=""
+                  class="form__reg"
+                  type="text"
+                  name="number"
+                  id="number5"
+                  placeholder="Первое число"
+                />
+              </div>
+              <div class="calculator__number">
+                <label class="calculator__label" for="number6"></label>
+                <input
+                  class="form__reg"
+                  type="text"
+                  name="number"
+                  id="number6"
+                  placeholder="Второе число"
+                />
+              </div>
+            </div>
+            <div onclick="calcM()" class="calculator__button btn">
+              Посчитать
+            </div>
+            <div class="m btn-calc"></div>
+            <a href="#popup-close" class="close-popup">X</a>
+          </form>
+        </div>
+      </div>
+      <div class="calculator" id="popup4">
+        <div class="calculator__content">
+          <form>
+            <div class="calculator__text">
+              <h2>Посчитать частное от деления чисел</h2>
+              <p>введите два числа</p>
+            </div>
+            <div class="calculator__form">
+              <div class="calculator__name">
+                <label class="calculator__label" for="number7"></label>
+                <input
+                  value=""
+                  class="form__reg"
+                  type="text"
+                  name="number"
+                  id="number7"
+                  placeholder="Первое число"
+                />
+              </div>
+              <div class="calculator__number">
+                <label class="calculator__label" for="number8"></label>
+                <input
+                  class="form__reg"
+                  type="text"
+                  name="number"
+                  id="number8"
+                  placeholder="Второе число"
+                />
+              </div>
+            </div>
+            <div onclick="calcQ()" class="calculator__button btn">
+              Посчитать
+            </div>
+            <div class="q btn-calc"></div>
+            <a href="#popup-close" class="close-popup">X</a>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
